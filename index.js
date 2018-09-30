@@ -16,18 +16,18 @@ app.get('/task', (req, res) => {
   res.json(tasks)
 })
 app.get('/task/:id', (req, res) => {
-  res.json(tasks.find(task => task.id === req.params.id))
+  res.json(tasks.find(task => task.id == req.params.id))
 })
 app.post('/task', (req, res) => {
   tasks.push(req.body)
   res.status(201).json(req.body)
 })
 app.put('/task/:id', (req, res) => {
-  const updateIndex = tasks.findIndex(task => task.id === req.params.id)
+  const updateIndex = tasks.findIndex(task => task.id == req.params.id)
   res.json(Object.assign(tasks[updateIndex], req.body))
 })
 app.delete('/task/:id', (req, res) => {
-  const deleteIndex = tasks.findIndex(task => task.id === req.params.id)
+  const deleteIndex = tasks.findIndex(task => task.id == req.params.id)
   tasks.splice(deleteIndex, 1)
   res.status(204).send()
 })

@@ -1,11 +1,11 @@
 [{
-    "id": "1",
+    "id": 1,
     "subject": "subject1",
     "detail": "detail",
     "status": "pending"
   },
   {
-    "id": "2",
+    "id": 2,
     "subject": "subject2",
     "detail": "detail",
     "status": "don"
